@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Adult Income Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7f8; text-align: center; }
+        h1 { margin-top: 30px; color: #333; }
+        form { background: white; padding: 20px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        label { display: block; text-align: left; margin-top: 12px; font-weight: bold; }
+        input[type="number"] { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 5px; }
+        .radio-group { text-align: left; margin-bottom: 12px; }
+        .radio-group label { font-weight: normal; margin-right: 16px; }
+        button { margin-top: 20px; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
+        button:hover { background-color: #0056b3; }
+        .result { margin-top: 20px; font-size: 1.2em; font-weight: bold; }
+        .probability { font-size: 1em; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>Adult Income Prediction</h1>
+    <form method="POST">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" step="any" placeholder="e.g. 37" required>
+
+        <label for="education_num">Education Number</label>
+        <input type="number" name="education_num" id="education_num" step="any" placeholder="e.g. 10" required>
+
+        <label for="hours_per_week">Hours Per Week</label>
+        <input type="number" name="hours_per_week" id="hours_per_week" step="any" placeholder="e.g. 40" required>
+
+        <label for="capital_gain">Capital Gain</label>
+        <input type="number" name="capital_gain" id="capital_gain" step="any" placeholder="e.g. 0" required>
+
+        <div class="radio-group">
+            <label>Sex</label>
+            <label><input type="radio" name="sex" value="Male" required> Male</label>
+            <label><input type="radio" name="sex" value="Female" required> Female</label>
+        </div>
+
+        <div class="radio-group">
+            <label>Marital Status</label>
+            <label><input type="radio" name="marital_status" value="Married-civ-spouse" required> Married</label>
+            <label><input type="radio" name="marital_status" value="Other" required> Not Married</label>
+        </div>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">{{ prediction }}</div>
+        {% if probability %}
+            <div class="probability">Confidence: {{ probability }}%</div>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
