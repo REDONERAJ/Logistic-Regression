@@ -6,7 +6,7 @@ The app provides a user-friendly form with both **numeric fields** and **radio b
 
 ---
 
-## 🔹 Features
+##  Features
 - Logistic Regression model trained on curated, important features
 - Tidy and clear input interface:
   - Numeric inputs for quantitative values
@@ -16,7 +16,7 @@ The app provides a user-friendly form with both **numeric fields** and **radio b
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```adult-income-logistic/
 │
 ├── app.py # Flask application
@@ -31,7 +31,7 @@ The app provides a user-friendly form with both **numeric fields** and **radio b
 
 ---
 
-## 📊 Dataset
+## Dataset
 - **Source:** [UCI Adult Income Dataset](https://archive.ics.uci.edu/ml/datasets/adult)
 - **Rows:** 48,842
 - **Target:**  
@@ -48,7 +48,7 @@ The app provides a user-friendly form with both **numeric fields** and **radio b
 
 ---
 
-## 🖥 Prediction Output
+## Prediction Output
 The model predicts:
 - **">50K Income"** – Likely earning over $50K annually  
 - **"<=50K Income"** – Likely earning $50K or less annually  
@@ -56,7 +56,7 @@ The model predicts:
 
 ---
 
-## 📦 Requirements
+## Requirements
 Flask
 scikit-learn
 pandas
@@ -65,7 +65,7 @@ joblib
 
 ---
 
-## 📷 Screenshot
+## Screenshot
 <img width="1366" height="640" alt="Screenshot 2025-08-11 112202" src="https://github.com/user-attachments/assets/3d3441da-1676-4800-b805-7cb24b94b1f5" />
 <img width="1366" height="644" alt="Screenshot 2025-08-11 112229" src="https://github.com/user-attachments/assets/3bb6c230-5be4-4789-9207-3c4c5b0f05d7" />
 <img width="1366" height="640" alt="Screenshot 2025-08-11 112306" src="https://github.com/user-attachments/assets/551deb33-ccde-42de-9334-8c1be8657407" />
